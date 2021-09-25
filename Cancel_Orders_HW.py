@@ -22,18 +22,3 @@ assert expected_text == actual_text, f'Expected {expected_text}, but got {actual
 
 driver.quit()
 
-
-
-
-
-
-
-
-
-
-
-
-
-driver.quit()
-
-
