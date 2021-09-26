@@ -15,6 +15,33 @@ Create your Amazon account:  search  (By.ID,  'createAccountSubmit')
 
 *Privacy Notice link:  search  (By.XPATH,  ("//a[text()='Privacy Notice']")
 
+"""
+
+# CSS Locators for lesson 3
+"""
+
+Amazon logo:  search (By.Xpath, "//i[@class='a-icon a-icon-logo']")
+
+Create Account:  search (By.CSS_SELECTOR, 'h1.a-spacing-small')
+
+Your Name:   search  (By.ID, 'ap-customer-name')
+
+Email:  search  (By.XPATH, "//input[@type= 'email']")
+
+Password:  search  (By.XPATH, "//input[@name= 'password']")
+
+Passwords must be at least 6 characters:  search  (By.CSS_SELECTOR, "div.auth-inlined-information-message div.a-alert-content")
+
+Re-enter password:  search  (By.XPATH, "//input[@id='ap_password_check']")
+
+Create your Amazon account:  search  (By.XPATH, "//input[@id='continue']")
+
+Conditions of Use:  search  (By.CSS_SELECTOR "[href*='/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie']")
+
+Privacy Notice:  search  (By.CSS_SELECTOR "[href*='/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie']")
+
+I wasn't able to figure this one out.
+Sign-In: search  
 
 
 """
