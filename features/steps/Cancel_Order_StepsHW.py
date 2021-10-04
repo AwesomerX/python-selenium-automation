@@ -3,6 +3,8 @@ from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from time import sleep
 
+
+
 @given('Open Amazon Help page')
 def open_amazon_help_page(context):
     context.driver.get('https://www.amazon.com/gp/help/customer/display.html')
@@ -12,7 +14,9 @@ def open_amazon_help_page(context):
 def verify_cancel_order_input(context):
     context.driver.find_element(By.ID, 'helpsearch').send_keys('Cancel order', Keys.ENTER)
 
+
 sleep(2)
+
 
 @then('Verify Cancel Items or Orders text is displayed')
 def verify_cancel_order_text(context):

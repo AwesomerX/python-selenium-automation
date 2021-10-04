@@ -1,9 +1,9 @@
-'''from time import sleep
+from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome('C:/Users/Chopp/Automation/python-selenium-automation/chromedriver.exe')
+driver = webdriver.Chrome('/chromedriver.exe')
 driver.maximize_window()
 
 # open the url
@@ -22,4 +22,4 @@ sleep(2)
 assert expected_text == actual_text, f'Expected {expected_text}, but got {actual_text}'
 
 driver.quit()
-'''
+

@@ -3,6 +3,8 @@ from behave import given, when, then
 from time import sleep
 
 
+
+
 BESTSELLERS_LINKS = (By.CSS_SELECTOR, '#zg_header li')
 
 
@@ -11,7 +13,7 @@ def open_amazon_bestsellers(context):
     context.driver.get('https://www.amazon.com/gp/bestsellers')
     context.driver.refresh()
 
-#sleep(3)
+sleep(3)
 
 
 @then('Verify there are {expected_links} links')

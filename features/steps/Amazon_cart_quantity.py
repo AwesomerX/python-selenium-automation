@@ -2,6 +2,7 @@ from behave import *
 from selenium.webdriver.common.by import By
 from time import sleep
 
+
 CART = (By.CSS_SELECTOR, ".nav-cart-icon.nav-sprite")
 TEXT = (By.CSS_SELECTOR, ".a-row.sc-your-amazon-cart-is-empty")
 
