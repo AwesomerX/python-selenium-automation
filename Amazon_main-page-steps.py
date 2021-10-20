@@ -1,28 +1,20 @@
-'''from selenium.webdriver import Keys
+from selenium.webdriver import Keys
+from selenium.webdriver.chrome import webdriver
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-
-ADD_TO_CART_BTN = (By.ID, 'add-to-cart-button')
-CART_COUNT = (By.XPATH, "//span[@id='nav-cart-count']")
-PRODUCT_NAME = (By.XPATH, "//span[@class='a-truncate-cut']")
-PRODUCT_PRICE = (By.XPATH,  "//div[@data-component-type='s-search-result']//a[.//span[@class='a-price']]")
-BESTSELLERS_LINKS = (By.CSS_SELECTOR, '#zg_header li')
-COLOR_OPTIONS = (By.CSS_SELECTOR, "#variation_color_name li")
-CURRENT_COLOR = (By.CSS_SELECTOR,  "#variation_color_name .selection")
-product_id = 'B08MJR6JKJ'
+from selenium.webdriver.chrome.service import Service
 
 
 # init driver
-driver = webdriver.Chrome('C:/Users/Chopp/Automation/python-selenium-automation/chromedriver.exe')
+
 driver.maximize_window()
-
-
 driver.wait = WebDriverWait(driver, 10)
 # driver.implicitly_wait(10)
+
+
 # wait(4)
 # sleep(4)
 
@@ -32,23 +24,19 @@ driver.wait = WebDriverWait(driver, 10)
 
 @given('Open Amazon homepage')
 def open_amazon_homepage(context):
-    context.driver.get('https://www.amazon.com/')
-
-
-
-
+    context.app.main_page.open_main_page()
 
  # When statements
+
 
 @when('Store product name')
 def get_product_name(context):
     context.current_product_name = context.driver.find_elements(*PRODUCT_NAME)
     print(f'Current product: {context.current_product_name}')
 
-
-
-
-
+@when('Click Cart Icon')
+def click_cart_icon(context):
+    context.app.q2header.click_cart_icon()
 
 # Then statements
 
@@ -64,4 +52,5 @@ def verify_product_name(context):
     print(f'Product name in the cart: {cart_product_name}')
     assert cart_product_name == context.current_product_name, \
         f'Expected {context.current_product_name}, but got {cart_product_name}'
+
 

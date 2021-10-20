@@ -18,7 +18,8 @@ def input_search(context, search_word):
     search.clear()
     search.send_keys(search_word)
     sleep(4)
-
+# another way to write this input search
+# @when('Click on amazon search icon')
 
 @when('Click on search icon')
 def click_search_icon(context):
