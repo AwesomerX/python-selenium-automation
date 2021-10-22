@@ -1,0 +1,17 @@
+h1 {
+    background-color:yellow;
+    color: red;
+    font-size: 300%
+}
+
+h2 {
+    background-color: darkturquoise;
+    color: green;
+    font-size: 250%;
+}
+
+li {
+    color: firebrick;
+    font-size: 150%;
+}
+
